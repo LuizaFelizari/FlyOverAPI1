@@ -1,4 +1,3 @@
-
 package br.dev.tcc.flyover.entities;
 
 import jakarta.persistence.Column;
@@ -21,11 +20,11 @@ public class Message {
     private UUID id;
     
     @ManyToOne
-    @JoinColumn(name = "idUserFrom") 
+    @JoinColumn(name = "ID_USER_FROM") 
     private User userFrom; //de
     
     @ManyToOne
-    @JoinColumn(name = "idUserTo") 
+    @JoinColumn(name = "ID_USER_TO") 
     private User userTo; //para
     
     private String project; 
