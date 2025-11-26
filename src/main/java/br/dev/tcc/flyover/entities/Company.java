@@ -12,7 +12,13 @@ public class Company extends User {
     
     private String cnpj;
     
-    public Company(UUID id, String login, String senha, String email) {
+    private String name;
+    
+    public String getName() {
+        return name;
+    }
+    
+    public Company(UUID id, String login, String senha, String email, String name) {
         super(id, login, senha, email);
     }
 
@@ -24,6 +30,7 @@ public class Company extends User {
         this.cnpj = cnpj;
     }
 
+    
     public Company() {
         //vazio
     }

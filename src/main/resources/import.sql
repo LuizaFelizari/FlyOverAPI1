@@ -1,6 +1,6 @@
 -- Company
 INSERT INTO USERS (ID, USER_TYPE, EMAIL, LOGIN, SENHA) VALUES ('550e8400-e29b-41d4-a716-446655440001', 'COMPANY', 'contato@techsolutions.com.br', 'techsolutions', '$2a$10$abcdefghijklmnopqrstuv');
-INSERT INTO USERS (ID, USER_TYPE, EMAIL, LOGIN, SENHA) VALUES ('550e8400-e29b-41d4-a716-446655440002', 'COMPANY', 'rh@inovacorp.com.br', 'inovacorp', '$2a$10$wxyzabcdefghijklmnopqr');
+INSERT INTO USERS (ID, USER_TYPE, EMAIL, LOGIN, SENHA) VALUES ('550e8400-e29b-41d4-a716-446655440003', 'COMPANY', 'rh@inovacorp.com.br', 'inovacorp', '$2a$10$wxyzabcdefghijklmnopqr');
 INSERT INTO USERS (ID, USER_TYPE, EMAIL, LOGIN, SENHA) VALUES ('550e8400-e29b-41d4-a716-446655440004', 'COMPANY', 'empresa004@email.com', 'empresa004', '$2a$10$abcdefghijklmnopqrstuv');
 
 -- Freelancers
@@ -11,9 +11,9 @@ INSERT INTO USERS (ID, USER_TYPE, EMAIL, LOGIN, SENHA)VALUES ('550e8400-e29b-41d
 -- ============================================
 -- 2. INSERINDO EMPRESAS (COMPANIES)
 -- ============================================
-INSERT INTO COMPANIES (ID, CNPJ) VALUES('550e8400-e29b-41d4-a716-446655440001', '12.345.678/0001-90');
-INSERT INTO COMPANIES (ID, CNPJ) VALUES('550e8400-e29b-41d4-a716-446655440002', '23.456.789/0001-01');
-INSERT INTO COMPANIES (ID, CNPJ) VALUES('550e8400-e29b-41d4-a716-446655440004', '34.567.890/0001-12');
+INSERT INTO COMPANIES (ID, CNPJ, NAME) VALUES('550e8400-e29b-41d4-a716-446655440001', '12.345.678/0001-90', 'techsolutions');
+INSERT INTO COMPANIES (ID, CNPJ, NAME) VALUES('550e8400-e29b-41d4-a716-446655440003', '23.456.789/0001-01', 'inovacorp');
+INSERT INTO COMPANIES (ID, CNPJ, NAME) VALUES('550e8400-e29b-41d4-a716-446655440004', '34.567.890/0001-12', 'empresa004');
 
 -- ============================================
 -- 3. INSERINDO FREELANCERS (FREELANCERS)
@@ -24,8 +24,7 @@ INSERT INTO FREELANCERS (ID, CPF) VALUES('550e8400-e29b-41d4-a716-446655440012',
 INSERT INTO FREELANCERS (ID, CPF) VALUES('550e8400-e29b-41d4-a716-446655440016', '345.678.901-23');
 
 -- ============================================
--- INSERINDO MENSAGENS (MESSAGES)
--- ============================================
+-- INSERINDO MENSAGENS (MESSAGES)========================================
 
 INSERT INTO MESSAGES (ID, ID_USER_FROM, ID_USER_TO, MESSAGE, PROJECT) VALUES('550e8400-e29b-41d4-a716-446655440001', '550e8400-e29b-41d4-a716-446655440001', '550e8400-e29b-41d4-a716-446655440001', 'Olá! Vi o projeto de redesign do website e me interessei muito. Tenho 8 anos de experiência em UI/UX e já trabalhei com várias empresas de tecnologia. Gostaria de agendar uma reunião para discutir o projeto em detalhes.', '660e8400-e29b-41d4-a716-446655440101');
 INSERT INTO MESSAGES (ID, ID_USER_FROM, ID_USER_TO, MESSAGE, PROJECT) VALUES('770e8400-e29b-41d4-a716-446655440202', '550e8400-e29b-41d4-a716-446655440001', '550e8400-e29b-41d4-a716-446655440011', 'Olá Ana! Obrigado pelo interesse. Seu portfólio é excelente! Podemos marcar uma call amanhã às 14h? Quero entender melhor sua abordagem para o projeto.', '660e8400-e29b-41d4-a716-446655440101');

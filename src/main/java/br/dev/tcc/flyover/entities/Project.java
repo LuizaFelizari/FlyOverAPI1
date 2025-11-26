@@ -1,11 +1,16 @@
 package br.dev.tcc.flyover.entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -32,11 +37,22 @@ public class Project{
     private String category;
     private String budget; //orçamento
     private String email;
-    private String company;
+    
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "COMPANY")
+    @JsonIgnore
+    private Company company;
+
 
     @CreationTimestamp
     @Column(name = "create_date", nullable = false, updatable = false)
     private LocalDate dateCreate;
+    
+    @JsonProperty("companyName")
+    public String getCompanyName() {
+        return company != null ? company.getName() : null;
+    }
+
     
     public Project() {
         
@@ -114,13 +130,6 @@ public class Project{
         this.dateCreate = dateCreate;
     }
 
-    public String getCompany() {
-        return company;
-    }
-
-    public void setCompany(String company) {
-        this.company = company;
-    }
     
     
 }
